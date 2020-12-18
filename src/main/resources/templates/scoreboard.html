@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <head>
+        <title>Bar Billiards Score Board </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" />
+    </head>
+<body>
+
+<!-- Header -->
+<header id="header">
+    <h1><a th:href="@{/}">Bar Billiards <span>Scoreboard</span></a></h1>
+</header>
+
+
+<section id="banner">
+    <div class="inner">
+<!--        <header>-->
+<!--            <h1 th:text="${card}">Players</h1>-->
+<!--        </header>-->
+        <div>
+            <table class="table table-striped">
+                <tr>
+                    <th>Player Id</th>
+                    <th>Name</th>
+                    <th>Score</th>
+                </tr>
+                <tr th:each="player : ${scoreboard}">
+                    <td th:text="${player.playerId}">Player Id</td>
+                    <td th:text="${player.playerName}">Name</td>
+                    <td th:text="${player.score}">Score</td>
+                </tr>
+            </table>
+        </div>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/start}">Break</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/reset/rematch}">New Game Same Players</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/reset/blank}">New Game New Players</a>
+    </div>
+</section>
+</body>
+</html>

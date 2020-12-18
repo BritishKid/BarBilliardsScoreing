@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <head>
+        <title>Bar Billiards Score Board </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" />
+    </head>
+<body>
+
+<!-- Header -->
+<header id="header">
+    <h1><a th:href="@{/}">Bar Billiards <span>Scoreboard</span></a></h1>
+</header>
+
+<section id="banner">
+    <div class="inner">
+        <header>
+            <h1 th:text="${card}">some th text</h1>
+        </header>
+        <a href="#main" class="button big alt scrolly" th:href="@{/player/create}">Create a Game</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/Scoreboard}">Scoreboard</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/highest}">Record Breaks</a>
+        Record breaks api not programmed yet
+    </div>
+</section>
+</body>
+</html>

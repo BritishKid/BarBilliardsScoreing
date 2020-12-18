@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <head>
+        <title>Bar Billiards Score Board </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" />
+    </head>
+<body>
+
+<!-- Header -->
+<header id="header">
+    <h1><a th:href="@{/}">Bar Billiards <span>Scoreboard</span></a></h1>
+</header>
+
+
+<section id="banner">
+    <div class="inner">
+                <header>
+                    <td th:text="${activePlayerName}">Active Player</td>
+                    <td th:text="${score}">Active Player</td>
+                </header>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=10}">White 10</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=20}">White 20</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=30}">White 30</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=50}">White 50</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=100}">White 100</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=200}">White 200</a>
+<!--        Look at splitting each side and making look better-->
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=20}">Red 10</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=40}">Red 20</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=60}">Red 30</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=100}">Red 50</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=200}">Red 100</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=400}">Red 200</a>
+<!--        My styling-->
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/void}">White Mushroom Knocked Over</a>
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/clear}">Black Mushroom Knocked Over</a>
+<!--        Next player-->
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/close}">Break Over</a>
+
+    </div>
+</section>
+</body>
+</html>

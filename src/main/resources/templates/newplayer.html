@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+
+    <head>
+        <title>Bar Billiards Score Board </title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="../static/css/main.css" th:href="@{/css/main.css}" rel="stylesheet" />
+    </head>
+<body>
+
+<!-- Header -->
+<header id="header">
+    <h1><a th:href="@{/}">Bar Billiards <span>Scoreboard</span></a></h1>
+</header>
+
+
+
+<section id="banner">
+    <div class="inner">
+        <header>
+            <h1>New Player</h1>
+            <form action="#" th:action="@{/player/new}" th:object="${player}" method="post">
+                <p>Name: <input type="text" th:name="player" /></p>
+                <p><input type="submit" value="Submit" />
+            </form>
+        </header>
+        <a href="#main" class="button big alt scrolly" th:href="@{/start}">Start Game</a>
+    </div>
+</section>
+</body>
+</html>
