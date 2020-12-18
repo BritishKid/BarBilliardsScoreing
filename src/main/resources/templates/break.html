@@ -15,31 +15,55 @@
     <h1><a th:href="@{/}">Bar Billiards <span>Scoreboard</span></a></h1>
 </header>
 
-
 <section id="banner">
     <div class="inner">
                 <header>
                     <h3 th:text="${activePlayerName}">Active Player</h3>
                     <h3 th:text="${score}">Score</h3>
                 </header>
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=10}">White 10</a>
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=20}">White 20</a>
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=30}">White 30</a>
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=50}">White 50</a>
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=100}">White 100</a>
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=200}">White 200</a>
-<!--        Look at splitting each side and making look better-->
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=20}">Red 10</a>
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=40}">Red 20</a>
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=60}">Red 30</a>
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=100}">Red 50</a>
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=200}">Red 100</a>
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=400}">Red 200</a>
-<!--        My styling-->
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/void}">White Mushroom Knocked Over</a>
+        <table>
+        <tr>
+            <td><a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=10}">White 10</a></td>
+            <td><a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=20}">Red 10</a></td>
+        </tr>
+        <tr>
+            <td>        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=20}">White 20</a>
+            </td>
+            <td>        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=40}">Red 20</a>
+            </td>
+        </tr>
+        <tr>
+            <td>        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=30}">White 30</a>
+            </td>
+            <td>        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=60}">Red 30</a>
+            </td>
+        </tr>
+        <tr>
+            <td>        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=50}">White 50</a>
+            </td>
+            <td>        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=100}">Red 50</a>
+            </td>
+        </tr>
+        <tr>
+            <td>        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=100}">White 100</a>
+            </td>
+            <td>        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=200}">Red 100</a>
+        </tr>
+        <tr>
+            </td>            <td>        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=200}">White 200</a>
+            <td>        <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=400}">Red 200</a>
+            </td>
+        </tr>
+        </table>
+            <!--        My styling-->
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/close}">Break Over</a>
+        <p></p>
+
+        <a href="#main" class="button big alt scrolly" th:href="@{/break/void}">Foul Ball</a>
+        <p></p>
         <a href="#main" class="button big alt scrolly" th:href="@{/break/clear}">Black Mushroom Knocked Over</a>
 <!--        Next player-->
-        <a href="#main" class="button big alt scrolly" th:href="@{/break/close}">Break Over</a>
+
 
     </div>
 </section>
