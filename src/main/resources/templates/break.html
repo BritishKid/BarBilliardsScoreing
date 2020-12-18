@@ -19,8 +19,8 @@
 <section id="banner">
     <div class="inner">
                 <header>
-                    <td th:text="${activePlayerName}">Active Player</td>
-                    <td th:text="${score}">Active Player</td>
+                    <h3 th:text="${activePlayerName}">Active Player</h3>
+                    <h3 th:text="${score}">Score</h3>
                 </header>
         <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=10}">White 10</a>
         <a href="#main" class="button big alt scrolly" th:href="@{/break/addScore=20}">White 20</a>
